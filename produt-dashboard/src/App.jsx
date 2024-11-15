@@ -4,26 +4,21 @@ import viteLogo from '/vite.svg'
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [products, setProducts] = useState([
+    {id: 1, name: "Product 1", price: 0, description:"not available"},
+    {id: 2, name: "Product 2", price: 0, description:"not available"},
+    {id: 3, name: "Product 3", price: 0, description:"not available"}
+  ]);
 
   return (
     <>
       <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
+      <h1>Product List</h1>
+      {/* Render ProductList and pass the placeholder list*/}
+      <ProductList products={products} />
+      <h2>Add a New Product</h2>
+      {/* Render AddProductForm and pass setProducts*/}
+      <AddProductForm setProducts={setProducts} />
       </div>
       <p className="read-the-docs">
         Click on the Vite and React logos to learn more
