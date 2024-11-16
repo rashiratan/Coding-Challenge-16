@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import ProductList from './components/ProductList';
+import AddProductForm from './components/AddProductForm';
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
