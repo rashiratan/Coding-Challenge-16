@@ -7,10 +7,15 @@ import './App.css'
 
 function App() {
   const [products, setProducts] = useState([
-    {id: 1, name: "Product 1", price: 0, description:"not available"},
-    {id: 2, name: "Product 2", price: 0, description:"not available"},
-    {id: 3, name: "Product 3", price: 0, description:"not available"}
+    {id: 1, name: "Laptop", price: "$" + 900, description:"Grey colored, with 6GB RAM and i7 13th gen processor"},
+    {id: 2, name: "Phone", price: "$" + 500, description:"Android 14 devide with 6 inch screen, and many other features"},
+    {id: 3, name: "Tablet", price: "$" + 700, description:"Android 14 device with a 10 inch screen and a stylus"}
   ]);
+
+  function addProduct(newProduct) {
+    setProducts((prevProducts) => [...prevProducts, newProduct]);
+  }
+  
 
   return (
     <>
@@ -20,13 +25,11 @@ function App() {
       <ProductList products={products} />
       <h2>Add a New Product</h2>
       {/* Render AddProductForm and pass setProducts*/}
-      <AddProductForm setProducts={setProducts} />
+      <AddProductForm addProduct={addProduct} />
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      
     </>
   )
 }
 
-export default App
+export default App;
