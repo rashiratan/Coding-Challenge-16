@@ -8,9 +8,9 @@ import './App.css'
 function App() {
   {/* Initial array of products*/}
   const [products, setProducts] = useState([ 
-    {id: 1, name: "Laptop", price: "$" + 900, description:"Grey colored, with 6GB RAM and i7 13th gen processor"},
-    {id: 2, name: "Phone", price: "$" + 500, description:"Android 14 devide with 6 inch screen, and many other features"},
-    {id: 3, name: "Tablet", price: "$" + 700, description:"Android 14 device with a 10 inch screen and a stylus"}
+    {id: 1, name: "Laptop", price: 900, description:"Grey colored, with 6GB RAM and i7 13th gen processor"},
+    {id: 2, name: "Phone", price: 500, description:"Android 14 devide with 6 inch screen, and many other features"},
+    {id: 3, name: "Tablet", price: 700, description:"Android 14 device with a 10 inch screen and a stylus"}
   ]);
 {/* Add new products to old products*/}
   function addProduct(newProduct) {
