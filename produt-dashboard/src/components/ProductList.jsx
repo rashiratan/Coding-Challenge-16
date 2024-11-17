@@ -2,6 +2,7 @@ import React from 'react';
 import ProductItem from './ProductItem';
 
 function ProductList({products}) {
+    {/* create a section of unordered lists for Product List*/}
     return (
         <div>
             <ul>
